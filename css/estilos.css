@@ -1,0 +1,353 @@
+@import url(https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* fuente del body */
+body {
+  margin: 0;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../img/fondo.jpg");
+  background-repeat: repeat-y no-repeat;
+  background-size: 100vw auto;
+  background-color: #cccccc;
+  overflow-x: hidden;
+}
+/* Fuente titulo principal */
+h1 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 60px;
+}
+
+/* fuente de los titulos */
+h2,
+h3,
+h5,
+h6 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: rgb(16, 63, 107);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* --------------------------- estilos del header ---------------- */
+.header {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.29);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+}
+
+.titulo {
+  margin: 10px 0px;
+  color: #93bba2;
+  padding: 15px;
+}
+
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: rgb(155, 188, 194);
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-left: auto;
+  color: #fff;
+  /* Accion al boton */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ------------------- Estilos del menu ------------ */
+.nav_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  border-radius: 2%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__link {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+/* Evento para pasar el mousse */
+.menu__link:hover,
+.select {
+  background: #a3d1be;
+  color: #0f0f0f;
+}
+
+*.ocultar {
+  left: 100%;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Estilos del buscador----------*/
+.buscador_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#buscador {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#label_patente {
+  font-family: "Open Sans", sans-serif;
+  font-weight: medium;
+}
+/* ---------- Estilos del boton----------*/
+button {
+  font-family: "Open Sans", sans-serif;
+  background: #c2daeb;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: block;
+  width: 30%;
+  margin: 5px auto;
+  color: rgb(3, 4, 20);
+  height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* ---------- mapa----------*/
+
+#map {
+  width: 30rem;
+  height: 20rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+.idTable {
+  width: 30px;
+}
+
+.direccionTable {
+  width: 200px;
+}
+
+.montoTable {
+  width: 100px;
+}
+
+.remolcadoTable {
+  width: 100px;
+}
+
+.fechaTable {
+  width: 80px;
+}
+.horaTable {
+  width: 70px;
+}
+
+.tipoTable {
+  width: 200px;
+}
+.collapsible {
+  background-color: #93bbaa;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #93bbaa;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #93bbaa;
+}
+
+/*----------------Switch-----------------*/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(226, 226, 226);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 183, 255);
+  border-radius: 10px;
+}
+
+.input {
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+}
+
+.loginFieldContainer{
+  display:flex;
+  flex-direction: column;
+}
+.loginForm{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2196f3;
+  padding: 20px;
+  width:50%;
+  border-radius: 8px
+}
+.loginCard{
+  display:flex;
+  justify-content: center;
+  margin: 50px
+}
+.inputLabel{
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight:400
+}
+
+.loginTitle{
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+}
