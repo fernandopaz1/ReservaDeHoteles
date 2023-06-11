@@ -469,6 +469,11 @@ input:checked + .slider:before {
 }
 
 #medioDePagoContainer{
+  
   width: 50%;
   border-radius: 10px;
+}
+
+.avisoCardContainer{
+  margin-bottom: 50px;
 }
