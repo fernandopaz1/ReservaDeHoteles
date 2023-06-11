@@ -65,7 +65,13 @@ const miembros = [
   )
 ]
 
+let storedString = localStorage.getItem("miembros")
+let cuentas = JSON.parse(storedString);
 
-const miembrosJsonString = JSON.stringify(miembros);
+if(!cuentas || !Array.isArray(cuentas)){
+  
+    const miembrosJsonString = JSON.stringify(miembros);
+    
+    localStorage.setItem("miembros", miembrosJsonString);
 
-localStorage.setItem("miembros", miembrosJsonString);
+}

@@ -21,12 +21,7 @@ const accessoValido = () => {
           if (cuenta.password.localeCompare(passwordLogin.value) == 0) {
               esContraseniaValida = true;
               return "";
-          }/* else {
-              cuenta.intentos += 1;
           }
-          if (cuenta.intentos > 5) {
-              tieneMuchosIntentos = true;
-          } */
       }
       if (!esUsuarioValido) {
           warnings = "El usuario es invalido";
@@ -50,10 +45,14 @@ login_form.addEventListener("submit", (e) => {
   let warnings = accessoValido();
   if (warnings.length != 0) {
     warningsLogin.innerHTML = warnings;
-  } else {
-      window.alert("Ingreso exitoso");
-      window.location.href = "hoteles.html"
-          // crearCuentaPaciente();
-          // cambiarVisibilidad(registro_form, false); // guarda tambien lo resetea
-  }
+    localStorage.setItem("token", null)    
+} else {
+    window.alert("Ingreso exitoso");
+    window.location.href = "hoteles.html"
+    localStorage.setItem("token", usuarioLogin.value);
+    }
 });
+
+redirectToRegistro.onclick = function(){
+    window.location.href = "registro.html"
+}
