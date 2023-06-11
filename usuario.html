@@ -50,6 +50,11 @@
     </header>
 
 
+    <div style="display: flex; flex-direction: row;">
+      <button id="agregarTarjetaBtn">Agregar Tarjeta</button>
+      <button id="agregarMedioDigitalBtn">Agregar medio digital</button>
+    </div>
+
     <div class="loginCard">
       <div class="loginForm" id="loginForm">
         <p class="loginTitle">Datos del usuario</p>
@@ -93,6 +98,61 @@
     </div>
 
 
+    <div id="myModalMedioPagoDigital" class="modal">
+      <div class="modal-content glass">
+        <span id="closeMyModalMedioPagoDigital" class="close">&times;</span>
+        <h2>Nuevo Medio Digital</h2>
+        <div class="newOrganizationFormcontainer">
+          <div class="searchFilterContainer">
+            <label id="labelInputNombreNewOrganization" for="inputNombreMedioDigital">Nombre</label>       
+            <input name="inputNombreMedioDigital" id="inputNombreMedioDigital"></input>
+          </div>
+    
+          <div class="searchFilterContainer">
+            <label id="labelInputEmailNewOrganization" for="inputEmailMedioDigital">Email</label>       
+            <input name="inputEmailMedioDigital" id="inputEmailMedioDigital"></input>
+          </div>
+    
+          <div class="searchFilterContainer">
+            <label id="labelInputCVUNewOrganization" for="inputCVUMedioDigital">CVU</label>       
+            <input name="inputCVUMedioDigital" id="inputCVUMedioDigital"></input>
+          </div>
+    
+          <div class="buttonModal">
+            <label id="errorNewMedioDigital" class="error"></label>
+            <button id="buttonSaveMedioDigital" class="search_button">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="myModalTarjeta" class="modal">
+      <div class="modal-content glass">
+        <span id="closeMyModalTarjeta" class="close">&times;</span>
+        <h2>Nueva Tarjeta</h2>
+        <div class="newOrganizationFormcontainer">
+          <div class="searchFilterContainer">
+            <label id="labelInputNombreNewOrganization" for="inputNombreTrjeta">Nombre</label>       
+            <input name="inputNombreTrjeta" id="inputNombreTrjeta"></input>
+          </div>
+    
+          <div class="searchFilterContainer">
+            <label id="labelInputNumeroNewOrganization" for="inputNumeroTarjeta">Número</label>       
+            <input name="inputNumeroTarjeta" id="inputNumeroTarjeta"></input>
+          </div>
+    
+          <div class="searchFilterContainer">
+            <label id="labelInputFechaVencimientoNewOrganization" for="inputFechaVencimientoNuevaTarjeta">Fecha de Vencimiento</label>       
+            <input type="date" name="inputFechaVencimientoNuevaTarjeta" id="inputFechaVencimientoNuevaTarjeta"></input>
+          </div>
+    
+          <div class="buttonModal">
+            <label id="errorNewtarjeta" class="error"></label>
+            <button id="buttonSaveTarjeta" class="search_button">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <script src="src/doms.js"></script>  

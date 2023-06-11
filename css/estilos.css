@@ -477,3 +477,9 @@ input:checked + .slider:before {
 .avisoCardContainer{
   margin-bottom: 50px;
 }
+
+.searchFilterContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px
+}
