@@ -13,7 +13,7 @@ const accessoValido = () => {
   for (let i = 0; i < cuentasPacientes.length; i++) {
       cuenta = cuentasPacientes[i];
       if (
-          cuenta.usuario.localeCompare(
+          cuenta.email.localeCompare(
             usuarioLogin.value.toLowerCase()
           ) == 0
       ) {
@@ -24,13 +24,13 @@ const accessoValido = () => {
           }
       }
       if (!esUsuarioValido) {
-          warnings = "El usuario es invalido";
+          warnings = "El email es invalido";
       }
       if (!esContraseniaValida) {
           warnings = "La contraseña es invalida";
       }
       if (!esUsuarioValido && !esContraseniaValida) {
-          warnings = "El usuario y la contraseña son invalidos";
+          warnings = "El email y la contraseña son invalidos";
       }
       if (tieneMuchosIntentos) {
           warnings = "Cuenta bloqueada";

@@ -92,7 +92,7 @@ if(!token){
   let cuenta
   
   for(let i=0; i<cuentas.length; i++){
-    if(cuentas[i].usuario === token){
+    if(cuentas[i].email === token){
       cuenta = cuentas[i] 
     }
   }
