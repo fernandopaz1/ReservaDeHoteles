@@ -19,6 +19,19 @@ class BilleteraVirtual extends MedioDePago{
     this.email = email;
   }
 }
+class Reserva {
+  constructor(hotel, nombre, apellido, fechaNacimiento, dni, ingreso, egreso, cantidadDeHuespedes, medioDePago){
+    this.hotel = hotel;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.fechaNacimiento = fechaNacimiento;
+    this.dni = dni;
+    this.ingreso = ingreso;
+    this.egreso = egreso;
+    this.cantidadDeHuespedes = cantidadDeHuespedes;
+    this.medioDePago = medioDePago
+  }
+}
 
 class Miembro {
   constructor(nombre, apellido, dni, email, edad, nivel, usuario, password, mediosDePago) {
@@ -31,8 +44,10 @@ class Miembro {
     this.usuario = usuario;
     this.password = password;
     this.mediosDePago = mediosDePago;
+    this.reservas = []
   }
 }
+
 
 const miembros = [
   new Miembro(

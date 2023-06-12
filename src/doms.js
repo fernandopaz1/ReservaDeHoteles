@@ -67,3 +67,13 @@ const errorBusquedaHotel = document.getElementById("errorBusquedaHotel")
 const selectMedioDePagoContainer = document.getElementById("selectMedioDePagoContainer") 
 const selectTipoMedioDePago = document.getElementById("selectTipoMedioDePago")
 const selectMedioDePago = document.getElementById("selectMedioDePago")
+
+const warningsReserva = document.getElementById("warningsReserva")
+
+const inputReservaNombre = document.getElementById("inputReservaNombre")
+const inputReservaApellido = document.getElementById("inputReservaApellido")
+const inputFechaNaciemiento = document.getElementById("inputFechaNaciemiento")
+const inputReservaEmail = document.getElementById("inputReservaEmail")
+const inputReservaDNI = document.getElementById("inputReservaDNI")
+
+const reservaForm = document.getElementById("reservaForm")
