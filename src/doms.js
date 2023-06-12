@@ -51,3 +51,19 @@ const inputCVUMedioDigital = document.getElementById("inputCVUMedioDigital")
 
 const buttonSaveMedioDigital = document.getElementById("buttonSaveMedioDigital")
 const errorNewMedioDigital = document.getElementById("errorNewMedioDigital")
+
+
+// hoteles
+const selectRegion = document.getElementById("selectRegion")
+
+const inputCantidadHuespedes = document.getElementById("inputCantidadHuespedes")
+const inputIngreso = document.getElementById("inputIngreso")
+const inputEgreso = document.getElementById("inputEgreso")
+
+const buttonBuscarHoteles = document.getElementById("buttonBuscarHoteles")
+const errorBusquedaHotel = document.getElementById("errorBusquedaHotel")
+
+// Reserva
+const selectMedioDePagoContainer = document.getElementById("selectMedioDePagoContainer") 
+const selectTipoMedioDePago = document.getElementById("selectTipoMedioDePago")
+const selectMedioDePago = document.getElementById("selectMedioDePago")

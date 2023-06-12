@@ -46,7 +46,7 @@ h6 {
 
 /* --------------------------- estilos del header ---------------- */
 .header {
-  height: 250px;
+  height: 170px;
   display: flex;
   justify-content: center;
   background-image: url("../img/banner.jpg");
@@ -69,7 +69,7 @@ h6 {
 
 .titulo {
   margin: 10px 0px;
-  color: #93bba2;
+  color: #00d9e9;
   padding: 15px;
 }
 
@@ -423,39 +423,6 @@ input:checked + .slider:before {
   background-color : rgb(134, 241, 255);
 }
 
-.orgs_container {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  height: 50vh;
-  width: 40%;
-  background-color: #fff;
-}
-
-.avisoCardContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 50px;
-  background-color: #fff;
-
-}
-
-.body_aviso_card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.datos_aviso_card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.imagen_av_card {
-  width: auto;
-  height: 100px;
-}
 
 .destacada {
   border: 2px solid gold;
@@ -474,9 +441,7 @@ input:checked + .slider:before {
   border-radius: 10px;
 }
 
-.avisoCardContainer{
-  margin-bottom: 50px;
-}
+
 
 .searchFilterContainer {
   display: flex;

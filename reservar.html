@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reserva de Hoteles</title>
+    <!-- Sirve para adaptar la pagina a cualquier tamaño de pantalla !-->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link
+      href="https://file.myfontastic.com/LT9qHCM4cQUc3ptB8qhwJ5/icons.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
+    />
+  </head>
+
+  <body>
+
+    <div class="loginCard">
+      <form class="loginForm" action="" method="POST" id="loginForm">
+        <p class="loginTitle">Reservar</p>
+        <div class="loginFieldContainer">
+          <label id="label_nombre" for="inputLoginNombre" class="inputLabel">Ingrese nombre</label>
+          <input type="text" name="nombre" id="inputLoginNombre" class="input" />
+        </div>
+        <div class="loginFieldContainer">
+          <label id="label_apellido" for="inputLoginApellido" class="inputLabel">Ingrese apellido</label>
+          <input type="text" name="apellido" id="inputLoginApellido" class="input" />
+        </div>
+        <div class="loginFieldContainer">
+          <label id="label_dni" for="inputLoginDNI" class="inputLabel">Ingrese su DNI</label>
+          <input type="text" name="dni" id="inputLoginDNI" class="input" />
+        </div>
+
+        <div class="loginFieldContainer">
+          <label id="label_dni" for="inputFechaNaciemiento" class="inputLabel">Ingrese Fecha de nacimiento</label>
+          <input type="date" name="inputFechaNaciemiento" id="inputFechaNaciemiento" class="input" />
+        </div>
+        <div class="loginFieldContainer">
+
+          <label id="label_email" for="inputLoginEmail" class="inputLabel">Ingrese email</label>
+          <input type="email" name="email" id="inputLoginEmail" class="input" />
+        </div>
+       
+        <div class="flex-row">
+          <div class="searchFilterContainer" style="display:flex; justify-content:center">
+            <label id="labelSelectRegion" for="selectTipoMedioDePago">Tipo de medio de pago</label>         
+            <select type="text" name="selectTipoMedioDePago" id="selectTipoMedioDePago" onchange="console.log(this)">  
+              <option value="" selected>Seleccione el tipo de medio de pago</option>
+              <option value="virtual" selected>Billetera Virtual</option>
+              <option value="tarjeta" selected>Tarjeta de crédito</option>
+            </select>
+          </div>
+
+          <div id="selectMedioDePagoContainer" class="searchFilterContainer" style="display:flex; justify-content:center">
+            <label id="labelSelectRegion" for="selectMedioDePago">Medio de pago</label>         
+            <select type="text" name="selectMedioDePago" id="selectMedioDePago" onchange="console.log(this)">  
+            </select>
+          </div>
+        </div>
+
+
+
+        <div id="myModalTarjeta">
+          <div class="modal-content glass">
+            <span id="closeMyModalTarjeta" class="close">&times;</span>
+            <h2>Nueva Tarjeta</h2>
+            <div class="newOrganizationFormcontainer">
+              <div class="searchFilterContainer">
+                <label id="labelInputNombreNewOrganization" for="inputNombreTrjeta">Nombre</label>       
+                <input name="inputNombreTrjeta" id="inputNombreTrjeta"></input>
+              </div>
+        
+              <div class="searchFilterContainer">
+                <label id="labelInputNumeroNewOrganization" for="inputNumeroTarjeta">Número</label>       
+                <input name="inputNumeroTarjeta" id="inputNumeroTarjeta"></input>
+              </div>
+        
+              <div class="searchFilterContainer">
+                <label id="labelInputFechaVencimientoNewOrganization" for="inputFechaVencimientoNuevaTarjeta">Fecha de Vencimiento</label>       
+                <input type="date" name="inputFechaVencimientoNuevaTarjeta" id="inputFechaVencimientoNuevaTarjeta"></input>
+              </div>
+        
+              <div class="buttonModal">
+                <label id="errorNewtarjeta" class="error"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="myModalMedioPagoDigital">
+          <div class="modal-content glass">
+            <span id="closeMyModalMedioPagoDigital" class="close">&times;</span>
+            <h2>Nuevo Medio Digital</h2>
+            <div class="newOrganizationFormcontainer">
+              <div class="searchFilterContainer">
+                <label id="labelInputNombreNewOrganization" for="inputNombreMedioDigital">Nombre</label>       
+                <input name="inputNombreMedioDigital" id="inputNombreMedioDigital"></input>
+              </div>
+        
+              <div class="searchFilterContainer">
+                <label id="labelInputEmailNewOrganization" for="inputEmailMedioDigital">Email</label>       
+                <input name="inputEmailMedioDigital" id="inputEmailMedioDigital"></input>
+              </div>
+        
+              <div class="searchFilterContainer">
+                <label id="labelInputCVUNewOrganization" for="inputCVUMedioDigital">CVU</label>       
+                <input name="inputCVUMedioDigital" id="inputCVUMedioDigital"></input>
+              </div>
+        
+              <div class="buttonModal">
+                <label id="errorNewMedioDigital" class="error"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button>Reservar</button>
+        <p class="warnings" id="warningsLogin"></p>
+      </form>
+    </div>
+      <button id="redirectToLogin"><a href="hoteles.html">Volver</a></button>
+
+      <script src="src/doms.js"></script>  
+      
+      <script src="persistencia/miembro/miembro.js"></script>  
+      <script src="src/reserva.js"></script>  
+  </body>
+</html>

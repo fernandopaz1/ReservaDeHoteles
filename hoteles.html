@@ -2,46 +2,38 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Sistema de estacionamiento</title>
+    <title>Portal de mascotas</title>
     <!-- Sirve para adaptar la pagina a cualquier tamaño de pantalla !-->
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.1/leaflet.markercluster.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/leaflet@0.7.3/dist/leaflet.css"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
     <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="UI/hotelCards/cardStyles.css" />
     <link rel="stylesheet" href="UI/organizationCard/cardStyles.css" />
 
     <link
       href="https://file.myfontastic.com/LT9qHCM4cQUc3ptB8qhwJ5/icons.css"
       rel="stylesheet"
     />
-
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
-    />
   </head>
 
   <body>
     <header class="header">
       <div class="contenedor">
-        <h1 class="titulo glass">Reserva de Hoteles</h1>
+        <h1 class="titulo glass">Reserva de hoteles</h1>
         <div class="nav_container">
           <nav class="nav glass" id="nav" block>
             <ul class="menu">
               <li class="menu__item">
-                <a class="menu__link" href="login.html">Registro/Login</a>
+                <a class="menu__link" href="login.html"
+                  >Login</a
+                >
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="usuario.html" id="avisos_menu"
@@ -59,23 +51,67 @@
       </div>
     </header>
 
-    <div
-      class="flex-row"
-      style="width: 100%; display: flex; align-items: center"
-    >
-      <div id="blogPosts" class="orgs_container"></div>
-      <div id="map"></div>
+    <!-- 
+       <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        -->
+        <div style="display: flex; flex-direction: row; height:calc(90vh - 170px)">
+
+        <div class="buscador_container" style="width: 70%;">
+          <div id="buscador" class="flexRow glass" style="display:flex; justify-content:center; width: 100%;"> 
+
+            <div class="searchFilterContainer" style="display:flex; justify-content:center">
+              <label id="labelTipoAnimal" for="inputCantidadHuespedes">Cantidad de huespedes</label>         
+              <input type="number" name="inputCantidadHuespedes" id="inputCantidadHuespedes" onchange="console.log(this)"></input>
+            </div>
+
+            <div class="searchFilterContainer" style="display:flex; justify-content:center">
+              <label id="labelSelectRegion" for="selectRegion">Region</label>         
+              <select type="text" name="selectRegion" id="selectRegion" onchange="console.log(this)">  
+                <option value="" selected>Seleccione la región</option>
+              </select>
+            </div>
+
+
+            <div style="display: flex; flex-direction: row;">
+              <div class="searchFilterContainer" style="display:flex; justify-content:center">
+                <label id="labelTipoAnimal" for="inputIngreso">Ingreso</label>         
+                <input type="date" name="inputIngreso" id="inputIngreso" onchange="console.log(this)"></input>
+              </div>
+
+              <div class="searchFilterContainer" style="display:flex; justify-content:center">
+                <label id="labelTipoAnimal" for="inputEgreso">Egreso</label>         
+                <input type="date" name="inputEgreso" id="inputEgreso" onchange="console.log(this)"></input>
+              </div>
+            
+            </div>
+            <label id="errorBusquedaHotel" class="error"></label>
+            <button id="buttonBuscarHoteles">Buscar</button>
+          </div>    
     </div>
 
+ 
+      <div
+        class="flex-row"
+        style="width: 100%; display: flex; align-items: center"
+      >
+        <div id="blogPosts" class="orgs_container" style="width: 70%"></div>
+      </div>
+    </div>
+    <script src="src/doms.js"></script>
+
     <script src="modulos/jquery-3.5.1.min.js"></script>
-
-    <script src="modulos/drawer.js"></script>
     <script src="src/config.js"></script>
-    <script src="modulos/normalizadorDeDirecciones.js"></script>
+    <script src="persistencia/hotel/hotel.js"></script>
 
-    <script src="persistencia/organizacion/organizacion.js"></script>
-    <script src="UI/organizationCard/organizationCard.js"></script>
+    <script src="modulos/administradorDeHoteles.js"></script>
+s
 
-    <script src="modulos/visualizadorDeMapas.js"></script>
+  
+    <script src="UI/hotelCards/hotelCard.js"></script>
+    <script src="src/hotel.js"></script>
+  
   </body>
 </html>

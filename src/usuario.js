@@ -276,7 +276,7 @@ buttonSaveMedioDigital.onclick = (e)=>{
     if(errores!=""){
       errorNewMedioDigital.innerHTML = errores
     }else{
-      let billeteraVirtual = new BilleteraVirtual(inputNombreMedioDigital.value, inputEmailMedioDigital.value, inputCVUMedioDigital.value)
+      let billeteraVirtual = new BilleteraVirtual(inputNombreMedioDigital.value, inputCVUMedioDigital.value, inputEmailMedioDigital.value)
       cuenta.mediosDePago.push(billeteraVirtual)
       
       saveCuentas(cuentas)

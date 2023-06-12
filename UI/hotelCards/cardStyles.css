@@ -1,0 +1,51 @@
+.orgs_container {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 90%;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius:10px;
+}
+
+.hotelDiv{
+  margin-bottom: 50px;
+  border-radius:10px;
+}
+
+.avisoCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 50px;
+  border-radius: 10px;
+  margin-bottom:10px;
+  background-color: #fff;
+}
+
+.body_aviso_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.datos_aviso_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.imagen_av_card {
+  width: auto;
+  height: 100px;
+}
+
+.destacada {
+  border: 2px solid gold;
+}
+
+#map {
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
