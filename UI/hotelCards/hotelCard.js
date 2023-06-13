@@ -1,7 +1,7 @@
 const hotelesDiv = document.getElementById("blogPosts");
 
 const templateHotel = `
-  <div class="avisoCardContainer" onClick="reservarHotel(event)" hotelId="{id}">
+  <div class="avisoCardContainer" >
   <h3 class="aviso_name_card">{nombre}  {estrellas}</h3>
   <div class="body_aviso_card">
     <div class="datos_container_card">
@@ -11,6 +11,10 @@ const templateHotel = `
 
       <p class="av_horario_card">Región: {zona}</p>
       <p class="av_telefono_card">Habitaciones disponibles: {habitaciones}</p>
+    </div>
+    <div>
+      <img class="imagen_org_card" src="{imagen}" />
+      <button class="buttonReservar" onClick="reservarHotel(event)" hotelId="{id}">Reservar</button>
     </div>
   </div>
 </div>
@@ -49,6 +53,7 @@ function renderHotelesCards(hoteles) {
 
     hotelTemplate = hotelTemplate.replace("{zona}", hotel.zona);
     hotelTemplate = hotelTemplate.replace("{habitaciones}", hotel.habitaciones.length);
+    hotelTemplate = hotelTemplate.replace("{imagen}", hotel.img);
 
     
     const hotelDiv = document.createElement("div");

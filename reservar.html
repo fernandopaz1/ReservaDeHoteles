@@ -28,15 +28,15 @@
         <p class="loginTitle">Reservar</p>
         <div class="loginFieldContainer">
           <label id="label_nombre" for="inputReservaNombre" class="inputLabel">Ingrese nombre</label>
-          <input type="text" name="inputReservaNombre" id="inputReservaNombre" class="input" />
+          <input type="text" name="inputReservaNombre" id="inputReservaNombre" class="input" disabled />
         </div>
         <div class="loginFieldContainer">
           <label id="label_apellido" for="inputReservaApellido" class="inputLabel">Ingrese apellido</label>
-          <input type="text" name="inputReservaApellido" id="inputReservaApellido" class="input" />
+          <input type="text" name="inputReservaApellido" id="inputReservaApellido" class="input" disabled />
         </div>
         <div class="loginFieldContainer">
           <label id="label_dni" for="inputReservaDNI" class="inputLabel">Ingrese su DNI</label>
-          <input type="text" name="inputReservaDNI" id="inputReservaDNI" class="input" />
+          <input type="text" name="inputReservaDNI" id="inputReservaDNI" class="input" disabled/>
         </div>
 
         <div class="loginFieldContainer">
@@ -46,7 +46,7 @@
         <div class="loginFieldContainer">
 
           <label id="label_email" for="inputReservaEmail" class="inputLabel">Ingrese email</label>
-          <input type="email" name="inputReservaEmail" id="inputReservaEmail" class="input" />
+          <input type="email" name="inputReservaEmail" id="inputReservaEmail" class="input" disabled />
         </div>
        
         <div class="flex-row">
@@ -126,11 +126,24 @@
         <p class="warnings" id="warningsReserva"></p>
       </form>
     </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content glass">
+        <h2>Necesita iniciar sesion</h2>
+          <div class="buttonModal">
+            <button id="buttonGoToLogin" class="search_button">Ir a inicio de sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
       <button id="redirectToLogin"><a href="hoteles.html">Volver</a></button>
 
       <script src="src/doms.js"></script>  
       
       <script src="persistencia/miembro/miembro.js"></script>  
       <script src="src/reserva.js"></script>  
+
+      
   </body>
 </html>

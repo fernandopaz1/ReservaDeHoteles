@@ -49,3 +49,13 @@
   display: flex;
   align-items: center;
 }
+
+.imagen_org_card {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.buttonReservar {
+  width: 100px
+}

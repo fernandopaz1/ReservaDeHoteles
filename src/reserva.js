@@ -76,15 +76,19 @@ selectMedioDePago.onchange = (event) => {
 
 if(!tokenUser || tokenUser === "null"){
   selectMedioDePagoContainer.style.display = "none";
-}else{
+  modal.style.display = "block";
 
+}else{
   
   for(let i=0; i<cuentas.length; i++){
     if(cuentas[i].email === tokenUser){
       cuenta = cuentas[i] 
     }
   }
-
+  inputReservaNombre.value = cuenta.nombre
+  inputReservaApellido.value = cuenta.apellido
+  inputReservaEmail.value = cuenta.email
+  inputReservaDNI.value = cuenta.dni
   addMedioDePagoToSelect(cuenta.mediosDePago, "")
 
 }
@@ -326,3 +330,7 @@ reservaForm.addEventListener("submit", (e) => {
     localStorage.setItem("token", usuarioLogin.value);
   }
 })
+
+buttonGoToLogin.onclick = function(){
+  window.location.href = "login.html"
+}
